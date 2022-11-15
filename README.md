@@ -4,7 +4,7 @@
 
 ### > Finished Preview Site: https://ryancruseadvicegeneratorapp.netlify.app/
 
-### Challenge Objective
+### > Challenge Objective
 
 The project was provided by frontend mentor, where you are required to build a advice generator that is responsive for desktop, tablet and mobile. The advice quotes are provided by a API: https://api.adviceslip.com
 
