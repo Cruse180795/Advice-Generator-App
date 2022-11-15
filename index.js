@@ -13,5 +13,5 @@ const fetchAPI = async() =>{
     const data = await response.json();
 
     title.textContent = `Advice #${data.slip.id}`;
-quote.textContent = `"${data.slip.advice}"`;
+quote.textContent = `" ${data.slip.advice} "`;
 }
