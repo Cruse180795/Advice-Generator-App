@@ -1,6 +1,6 @@
 # Advice-Generator-App
 
-### > Frontend-Mentor Challenge (Challenge Hub: https://www.frontendmentor.io/solutions/advice-generator-IKRcCoM0gM)
+### > Frontend-Mentor Challenge (Challenge Hub: https://www.frontendmentor.io/solutions/advice-generator-app-kcxHAhr1DT)
 
 ### > Finished Preview Site: https://ryancruseadvicegeneratorapp.netlify.app/
 
