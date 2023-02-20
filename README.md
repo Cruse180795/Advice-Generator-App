@@ -6,6 +6,13 @@
 
 ### > Challenge Objective
 
-The project was provided by frontend mentor, where you are required to build a advice generator that is responsive for desktop, tablet and mobile. The advice quotes are provided by a API: https://api.adviceslip.com
+Frontend Mentor Project. For this project i was tasked with building a website that would allow users to generate random advice from the slip API. I created the layout using a combination of HTML and CSS whilst using Figma as a reference for the intended mobile and desktop designs. I used JavaScript to create the API call and to display the advice on the page. I used the following technologies in this project:
+
+1. HTML
+2. CSS
+3. JavaScript 
+4. Slip API
+5. Postman Agent
+6 Figma
 
 
