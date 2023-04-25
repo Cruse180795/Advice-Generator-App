@@ -13,6 +13,6 @@ For this project i was tasked with building a website that would allow users to 
 3. JavaScript 
 4. Slip API
 5. Postman Agent
-6 Figma
+6. Figma
 
 
