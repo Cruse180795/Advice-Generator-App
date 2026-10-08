@@ -7,7 +7,10 @@ interface Slip {
 }
 
 async function getAdviceFromSlipAPI(signal?: AbortSignal): Promise<Slip> {
-  const response = await fetch(`https://api.adviceslip.com/advice?t=${Date.now()}`, { signal });
+  const timeout = AbortSignal.timeout(8000);
+  const combined = signal ? AbortSignal.any([signal, timeout]) : timeout;
+
+  const response = await fetch(`https://api.adviceslip.com/advice?t=${Date.now()}`, { signal: combined });
   if (!response.ok) throw new Error(`Request failed: ${response.status}`);
   const data: { slip: Slip } = await response.json();
   return data.slip;
@@ -24,6 +27,7 @@ export default function App() {
     try {
       setSlip(await getAdviceFromSlipAPI(signal));
     } catch (err) {
+      if (signal?.aborted) return; // unmount
       if (err instanceof DOMException && err.name === "AbortError") return;
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
@@ -33,10 +37,15 @@ export default function App() {
 
   useEffect(() => {
     const controller = new AbortController();
+    const signal = AbortSignal.any([
+      controller.signal,
+      AbortSignal.timeout(8000), // 8 seconds
+    ]);
 
-    getAdviceFromSlipAPI(controller.signal)
+    getAdviceFromSlipAPI(signal)
       .then(setSlip)
       .catch((err) => {
+        if (controller.signal.aborted) return; // unmount
         if (err instanceof DOMException && err.name === "AbortError") return;
         setError(err instanceof Error ? err.message : "Something went wrong");
       })
