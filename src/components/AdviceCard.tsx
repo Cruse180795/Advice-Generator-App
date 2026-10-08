@@ -21,7 +21,7 @@ export default function AdviceCard() {
         </picture>
       </div>
 
-      <button className="bg-green-300 rounded-full size-16 flex items-center justify-center absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
+      <button className="bg-green-300 rounded-full size-16 flex items-center justify-center absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 lg:cursor-pointer hover:shadow-[0_0_40px_0_#53FFAA] transition-all ease-in-out duration-300">
         <DiceIcon className="size-6" />
       </button>
     </section>
