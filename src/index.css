@@ -3,6 +3,8 @@
 @theme {
     --font-manrope: "Manrope";
 
+    --radius-10: 0.625rem;
+
     --leading-135: 135%;
 
     --text-13: 0.813rem;
@@ -23,10 +25,13 @@
     font-family: "Manrope";
     src: url("assets/fonts/Manrope-VariableFont_wght.woff2") format("woff2");
     font-display: swap;
-    font-weight: 800;
+    font-weight: 100 900;
     font-style: normal;
 }
 
 body {
     font-family: var(--font-manrope);
+    background-color: var(--color-blue-950);
+    font-weight: 800;
+    line-height: var(--leading-135);
 }
